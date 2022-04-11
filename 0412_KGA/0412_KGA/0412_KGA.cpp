@@ -48,7 +48,7 @@ int main()
 	
 	실습 1. 3 ~ 7 사이의 랜덤한 숫자를 출력하는 프로그램을 작성하자.
 
-	실습 2. 가자 작은 값과 큰 값을 입력 받아서, 그 사이의 임의의 값을 출력하는 프로그램을 작성하자
+	실습 2. 각자 작은 값과 큰 값을 입력 받아서, 그 사이의 임의의 값을 출력하는 프로그램을 작성하자
 
 	실습 3. 프로그램을 실행하면 내부적으로 1 ~ 10 사이의 숫자가 정답으로 정해진다. 유저가 1~10 사이의 숫자를 입력하면 맞으면 true, 틀리면 false를 출력
 	
@@ -64,16 +64,30 @@ int main()
 
 	//(10 < 5) ? cout << "10이 5보자 크다." : cout << "10이 5보다 작다" << endl;
 
-	cout << "3~7 사이의 랜덤한 값 = \n";
-	cout << "가장작은값: " << "가장 큰 값 : \n";
-
-
 	srand(time(0));
-	//for (int i = 0; i < 10; i++)
-	//{
-	//	int num = rand();
 
-	//}
-	cout << rand() << endl;
+	int randNum = (rand() % 5) + 3;
+	int Minvalue = 0;
+	int Maxvalue = 0;
+	int WhatNum = 0;
+	int randNum2 = (rand() % 10) + 1;
+
+	cout << "3~7 사이의 랜덤한 값 = \n" << randNum << endl;
+	cout << "가장 작은값: ";
+	cin >> Minvalue;
+	cout << "가장 큰값: ";
+	cin >> Maxvalue;
+	int temp = Minvalue ;
+	Minvalue = Maxvalue > Minvalue ? Minvalue : Maxvalue;
+	Maxvalue = Maxvalue > temp ? temp : Maxvalue;
+
+	cout <<( rand() % (Maxvalue - Minvalue)) + Minvalue;
+	cout << "1~10 아무숫자 입력:  ";
+	cin >> WhatNum;
+	cout << boolalpha <<(WhatNum == randNum2);
+	
+
+
+
 
 }
