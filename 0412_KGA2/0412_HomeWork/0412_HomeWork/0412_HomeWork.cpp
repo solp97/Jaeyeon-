@@ -8,35 +8,35 @@ using namespace std;
 int main()
 {
     /*
-    
+
     1)
     *
     **
     ***
     ****
     *****
-    
+
     2)
           *
          **
         ***
-       **** 
+       ****
       *****
-      
+
     3)
     *****
     ****
     ***
     **
-    * 
-    
+    *
+
     4)
     *****
      ****
       ***
        **
         *
-    
+
     5)
          *
         ***
@@ -50,7 +50,7 @@ int main()
        *****
         ***
          *
-         
+
     7)
 
          *
@@ -62,85 +62,117 @@ int main()
        *****
         ***
          *
-         
-         
-      
+
+
+
 
     */
 
-    
-    
+
+
     cout << "1번 문제" << endl;
     for (int i = 1; i < 6; i++)
     {
-
         for (int j = 0; j < i; j++)
         {
-
-            cout << "*" ;
-
-
-
+            cout << "*";
         }
         cout << "\n";
     }
 
     cout << "2번 문제" << endl;
-    
+
     for (int i = 5; i > 0; i--)
     {
-        for (int j = 1; j > i; j++)
+        for (int a = i - 1; a > 0; a--)
         {
-
-            for (int k = 4; k > 0 ; k-- )
-            {
-
-                cout << " ";
-
-
-
-            }
+            cout << " ";
+        }
+        int b = 6 - i;
+        for (int c = 0; c < b; c++)
+        {
             cout << "*";
         }
-        cout << " \n";
-
+        cout << "\n";
     }
     cout << "3번 문제" << endl;
     for (int i = 0; i < 5; i++)
     {
-            for (int k = 5; k > i; k--)
-            {
-
-                cout << "*";
-
-
-
-            }
-            cout << " \n";
-    }
-   
-    cout << "4번 문제" << endl;
-    for (int i = 0; i < 5; i++)
-    {
-        for (int j = 4; j > 0 ; j--)
+        for (int k = 5; k > i; k--)
         {
-            for (int k = 5; k > i; k--)
-            {
-
-                cout << " ";
-
-
-
-            }
-            cout << "\n";
+            cout << "*";
         }
-        cout << " ";
-
-
-
-
+        cout << " \n";
     }
-            
+
+    cout << "4번 문제" << endl;
+    for (int i = 1; i < 6; i++)
+    {
+        for (int a = i - 1; a > 0; a--)
+        {
+            cout << " ";
+        }
+        int b = i;
+        for (int c = 6; c > b; c--)
+        {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+    cout << "5번 문제" << endl;
+    for (int i = 5; i > 0; i--)
+    {
+        for (int a = i - 1; a > 0; a--)
+        {
+            cout << " ";
+        }
+        int b = 6 - i;
+        for (int c = 0; c < b * 2 - 1; c++)
+        {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+
+    cout << "6번 문제" << endl;
+    for (int i = 1; i < 6; i++)
+    {
+        for (int a = i - 1; a > 0; a--)
+        {
+            cout << " ";
+        }
+        for (int c = 10; c > i * 2 - 1; c--)
+        {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+    cout << "7번 문제" << endl;
+    for (int i = 5; i > 0; i--)
+    {
+        for (int a = i - 1; a > 0; a--)
+        {
+            cout << " ";
+        }
+        int b = 6 - i;
+        for (int c = 0; c < b * 2 - 1; c++)
+        {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+    for (int i = 1; i < 6; i++)
+    {
+        for (int a = i; a > 0; a--)
+        {
+            cout << " ";
+        }
+        for (int c = 8; c > i * 2 - 1; c--)
+        {
+            cout << "*";
+        }
+        cout << "\n";
+    }
 }
 
 
