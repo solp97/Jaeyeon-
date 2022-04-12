@@ -89,7 +89,31 @@ int main()
 
 	   */
 
+		/*
+		1_2 switch
 
+		{
+			case 정수:
+
+				실행문
+
+			break;
+
+			case 정수2:
+
+				실행문2
+
+			break;
+
+			default; //해당하는 정수값이 없을 때
+
+				실행문 3
+
+			break;
+
+		}
+
+		*/
 
 
 
@@ -138,33 +162,71 @@ int main()
 
    */
 
-	int input_Numb;
-	cout << "숫자를 입력: ";
-	cin >> input_Numb;
+//	int input_Numb;
+//	cout << "숫자를 입력: ";
+//	cin >> input_Numb;
+//
+//
+//	if (input_Numb > 10)
+//	{
+//		cout << "입력된 숫자가 10보다 큽니다" << endl;
+//	}
+//	
+//
+//else if ( input_Numb > 9)
+//{
+//cout << "입력된 숫자가 9보다 큽니다" << endl;
+//
+//}
+//
+//else if ( input_Numb > 6)
+//{
+//cout << "입력된 숫자가 6보다 큽니다" << endl;
+//
+//}
+//
+//else
+//{
+//cout << "입력된 숫자가 6보다 작거나 같습니다." << endl;
+//
+//}
+	 //switch문 실습
+	//당신의 고향은 어디입니까?
+	//1. 서울 2. 양평 3.광주 4. 대전 5.제주도
 
+	//안녕하세요 당신의 고향은 서울이군요.
+int chose_Num;
 
-	if (input_Numb > 10)
-	{
-		cout << "입력된 숫자가 10보다 큽니다" << endl;
-	}
-	
+cout << "당신의 고향은 어디입니까? \n " << "1. 서울 2. 양평 3. 광주 4. 대전 5. 제주도\n";
+cin >> chose_Num;
 
-if (10 >= input_Numb > 9)
+switch (chose_Num)
 {
-cout << "입력된 숫자가 9보다 큽니다" << endl;
+case 1: 
+	cout << "안녕하세요 당신의 고향은 서울이군요";
+	break;
+case 2: 
+	cout << "안녕하세요 당신의 고향은 양평이군요";
+	break;
+case 3:
+	cout << "안녕하세요 당신의 고향은 광주이군요";
+	break;
+case 4:
+	cout << "안녕하세요 당신의 고향은 대전이군요";
+	break;
+case 5: 
+	cout << "안녕하수꽝, 혼저옵서예";
+	break;
 
+default:
+	break;
 }
 
-if (9 >= input_Numb > 6)
-{
-cout << "입력된 숫자가 6보다 큽니다" << endl;
 
-}
 
-if (6 >= input_Numb )
-{
-cout << "입력된 숫자가 6보다 작거나 같습니다." << endl;
 
-}
+
+
+
 
 }
