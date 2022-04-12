@@ -34,7 +34,7 @@ int main()
 	// 난수 (랜덤값)
 	/*
 	
-	rand(); 0~32767 사이의 랜덤한 값이 반환된다.
+	rand(); 0~32767 사이의 랜덤한 값이 반환된다. 4byte
 	함수 내부에 seed값이 있어서 이 값에 의해서 리턴값이 정해진다.
 	기본적으로 seed : 1로 세팅되어 있다.
 	
@@ -44,19 +44,9 @@ int main()
 
 	*/
 
-	/*
-	
-	실습 1. 3 ~ 7 사이의 랜덤한 숫자를 출력하는 프로그램을 작성하자.
-
-	실습 2. 각자 작은 값과 큰 값을 입력 받아서, 그 사이의 임의의 값을 출력하는 프로그램을 작성하자
-
-	실습 3. 프로그램을 실행하면 내부적으로 1 ~ 10 사이의 숫자가 정답으로 정해진다. 유저가 1~10 사이의 숫자를 입력하면 맞으면 true, 틀리면 false를 출력
-	
-	
-	
-	*/
 
 
+	
 
 
 	//cout << !1 << endl;  //0
@@ -64,13 +54,62 @@ int main()
 
 	//(10 < 5) ? cout << "10이 5보자 크다." : cout << "10이 5보다 작다" << endl;
 
-	srand(time(0));
+	//제어문		데이터(타입 / 연산자 / <제어구조>
+	/*
+	1. 조건문 : 특정 조건에 따라서 실행문을 실행할지 안할지 제어 : if / switch
+	2. 반복문 : 특정 조건에 따라서 실행문을 일정 횟수만큼 반복 실행 제어
+
+	조건문
+
+	1_1. if 문
+		if (조건식1)
+		{
+		
+		실행문1;
+
+		}
+
+		else if (조건식2)
+		{
+		
+		실행문 1;
+		
+		
+		}
+
+		else
+		{
+		
+		
+		실행문 2;
+		
+		
+		}
+	
+	*/
+	
+
+
+
+
+	/*
+
+실습 1. 3 ~ 7 사이의 랜덤한 숫자를 출력하는 프로그램을 작성하자.
+
+실습 2. 각자 작은 값과 큰 값을 입력 받아서, 그 사이의 임의의 값을 출력하는 프로그램을 작성하자
+
+실습 3. 프로그램을 실행하면 내부적으로 1 ~ 10 사이의 숫자가 정답으로 정해진다. 유저가 1~10 사이의 숫자를 입력하면 맞으면 true, 틀리면 false를 출력
+
+
+
+*/
+	/*srand(time(0));
 
 	int randNum = (rand() % 5) + 3;
 	int Minvalue = 0;
 	int Maxvalue = 0;
 	int WhatNum = 0;
-	int randNum2 = (rand() % 10) + 1;
+	int randNum2 = (rand() % 9) + 1;
 
 	cout << "3~7 사이의 랜덤한 값 = \n" << randNum << endl;
 	cout << "가장 작은값: ";
@@ -81,14 +120,51 @@ int main()
 	Minvalue = Maxvalue > Minvalue ? Minvalue : Maxvalue;
 	Maxvalue = Maxvalue > temp ? temp : Maxvalue;
 
-	cout <<  "작은값과 큰값의 랜덤 값:" << (rand() % (Maxvalue - Minvalue)) + Minvalue;
+	cout <<  "작은값과 큰값의 랜덤 값:" << (rand() % (Maxvalue - Minvalue +1)) + Minvalue;
 
 	cout << "1~10 아무숫자 입력:  ";
 	cin >> WhatNum;
-	cout << boolalpha <<(WhatNum == randNum2);
+	cout << boolalpha <<(WhatNum == randNum2);*/
 	
 
+//조건문 실습1.
+/*정수를 하나 입력 받아서
+입력 받은 숫자가 10보다 크면 "입력된 숫자가 10보다 큽니다" 출력
+10이하 9 초과이면 "9보다 큽니다" 출력
+9이하 6초과 이면 "6보다 큽니다" 출력
+그 이외에는 "6보다 작거나 같습니다" 출력
 
 
+*/
+
+int input_Numb;
+cout << "숫자를 입력: "
+cin >> input_numb;
+
+
+if (input_numb > 10)
+
+cout << "입력된 숫자가 10보다 큽니다" << endl;
 
 }
+
+if (10 >= input_numb > 9 )
+
+cout << "입력된 숫자가 9보다 큽니다" << endl;
+
+}
+
+if (9 >= input_numb > 6)
+
+cout << "입력된 숫자가 6보다 큽니다" << endl;
+
+}
+
+if (6 >= input_numb > )
+
+cout << "입력된 숫자가 6보다 작거나 같습니다." << endl;
+
+}
+
+
+
