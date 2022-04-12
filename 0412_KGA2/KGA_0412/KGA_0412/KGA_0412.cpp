@@ -52,9 +52,7 @@ int main()
 
 	   //cout << !1 << endl;  //0
 	   //cout << !0 << endl;  //1
-
 	   //(10 < 5) ? cout << "10이 5보자 크다." : cout << "10이 5보다 작다" << endl;
-
 	   //제어문		데이터(타입 / 연산자 / <제어구조>
 	   /*
 	   1. 조건문 : 특정 조건에 따라서 실행문을 실행할지 안할지 제어 : if / switch
@@ -115,6 +113,56 @@ int main()
 
 		*/
 
+		/*
+		반복문
+		2_1 while (조건식)
+		{
+		 실행문;
+		 조건식을 바꾸는 실행문;
+		 break;
+
+		}
+
+
+		if (조건식)
+			{
+				
+			break;
+			}	
+
+		do-while문
+
+		do
+		{
+			실행문;
+
+		}
+		
+		while (조건식);
+		
+		
+		
+		
+		*/
+
+		/*
+		2_2 For문
+
+		for ((1)초기식; (2)조건식; (3)증감식;)
+		{
+
+			(4)실행문;
+
+		}
+		
+		(1) -> (2) -> (4) -> (3) -> (2) -> (4) -> (3) .... 조건식의 결과같이 0(False)이 나올 때까지
+		
+		
+		
+		
+		
+		
+		*/
 
 
 	   /*
@@ -128,105 +176,276 @@ int main()
 
 
    */
-   /*srand(time(0));
-
-   int randNum = (rand() % 5) + 3;
-   int Minvalue = 0;
-   int Maxvalue = 0;
-   int WhatNum = 0;
-   int randNum2 = (rand() % 9) + 1;
-
-   cout << "3~7 사이의 랜덤한 값 = \n" << randNum << endl;
-   cout << "가장 작은값: ";
-   cin >> Minvalue;
-   cout << "가장 큰값: ";
-   cin >> Maxvalue;
-   int temp = Minvalue ;
-   Minvalue = Maxvalue > Minvalue ? Minvalue : Maxvalue;
-   Maxvalue = Maxvalue > temp ? temp : Maxvalue;
-
-   cout <<  "작은값과 큰값의 랜덤 값:" << (rand() % (Maxvalue - Minvalue +1)) + Minvalue;
-
-   cout << "1~10 아무숫자 입력:  ";
-   cin >> WhatNum;
-   cout << boolalpha <<(WhatNum == randNum2);*/
-
-
-   //조건문 실습1.
-   /*정수를 하나 입력 받아서
-   입력 받은 숫자가 10보다 크면 "입력된 숫자가 10보다 큽니다" 출력
-   10이하 9 초과이면 "9보다 큽니다" 출력
-   9이하 6초과 이면 "6보다 큽니다" 출력
-   그 이외에는 "6보다 작거나 같습니다" 출력
-
-
-   */
-
-//	int input_Numb;
-//	cout << "숫자를 입력: ";
-//	cin >> input_Numb;
+//   srand(time(0));
+//   int randNum2 = (rand() % 9) + 1;
+//
+//   /*int randNum = (rand() % 5) + 3;
+//   int Minvalue = 0;
+//   int Maxvalue = 0;
+//   int WhatNum = 0;
+// 
+//
+//   cout << "3~7 사이의 랜덤한 값 = \n" << randNum << endl;
+//   cout << "가장 작은값: ";
+//   cin >> Minvalue;
+//   cout << "가장 큰값: ";
+//   cin >> Maxvalue;
+//   int temp = Minvalue ;
+//   Minvalue = Maxvalue > Minvalue ? Minvalue : Maxvalue;
+//   Maxvalue = Maxvalue > temp ? temp : Maxvalue;
+//
+//   cout <<  "작은값과 큰값의 랜덤 값:" << (rand() % (Maxvalue - Minvalue +1)) + Minvalue;
+//
+//   cout << "1~10 아무숫자 입력:  ";
+//   cin >> WhatNum;
+//   cout << boolalpha <<(WhatNum == randNum2);*/
 //
 //
-//	if (input_Numb > 10)
-//	{
-//		cout << "입력된 숫자가 10보다 큽니다" << endl;
-//	}
-//	
+//   //조건문 실습1.
+//   /*정수를 하나 입력 받아서
+//   입력 받은 숫자가 10보다 크면 "입력된 숫자가 10보다 큽니다" 출력
+//   10이하 9 초과이면 "9보다 큽니다" 출력
+//   9이하 6초과 이면 "6보다 큽니다" 출력
+//   그 이외에는 "6보다 작거나 같습니다" 출력
 //
-//else if ( input_Numb > 9)
+//
+//   */
+//
+////	int input_Numb;
+////	cout << "숫자를 입력: ";
+////	cin >> input_Numb;
+////
+////
+////	if (input_Numb > 10)
+////	{
+////		cout << "입력된 숫자가 10보다 큽니다" << endl;
+////	}
+////	
+////
+////else if ( input_Numb > 9)
+////{
+////cout << "입력된 숫자가 9보다 큽니다" << endl;
+////
+////}
+////
+////else if ( input_Numb > 6)
+////{
+////cout << "입력된 숫자가 6보다 큽니다" << endl;
+////
+////}
+////
+////else
+////{
+////cout << "입력된 숫자가 6보다 작거나 같습니다." << endl;
+////
+////}
+//	 //switch문 실습
+//	//당신의 고향은 어디입니까?
+//	//1. 서울 2. 양평 3.광주 4. 대전 5.제주도
+//
+//	//안녕하세요 당신의 고향은 서울이군요.
+//int chose_Num;
+//
+//cout << "당신의 고향은 어디입니까? \n " << "1. 서울 2. 양평 3. 광주 4. 대전 5. 제주도\n";
+//cin >> chose_Num;
+//
+////switch (chose_Num)
+////{
+////case 1: 
+////	cout << "안녕하세요 당신의 고향은 서울이군요";
+////	break;
+////case 2: 
+////	cout << "안녕하세요 당신의 고향은 양평이군요";
+////	break;
+////case 3:
+////	cout << "안녕하세요 당신의 고향은 광주이군요";
+////	break;
+////case 4:
+////	cout << "안녕하세요 당신의 고향은 대전이군요";
+////	break;
+////case 5: 
+////	cout << "안녕하수꽝, 혼저옵서예";
+////	break;
+////
+////default:
+////	cout << "5개중에 선택하세요";
+////	break;
+////}
+//
+//if (chose_Num == 1)
 //{
-//cout << "입력된 숫자가 9보다 큽니다" << endl;
+//	cout << "안녕하세요 당신의 고향은 서울이군요";
+//
+// }
+//else if (chose_Num == 2)
+//{
+//	cout << "안녕하세요 당신의 고향은 양평이군요";
+//
+//}
+//else if (chose_Num == 3)
+//{
+//	cout << "안녕하세요 당신의 고향은 광주이군요";
+//
+//}
+//else if (chose_Num == 4)
+//{
+//	cout << "안녕하세요 당신의 고향은 대전이군요";
 //
 //}
 //
-//else if ( input_Numb > 6)
+//else if (chose_Num == 5)
 //{
-//cout << "입력된 숫자가 6보다 큽니다" << endl;
+//	cout << "안녕하수꽝, 혼저옵서예";
 //
 //}
 //
 //else
+//
+//cout << "5개중에 선택하세요";
+//int a = 0;
+//int b = 0;
+//int c = 0;
+//
+//while (a < 10)
 //{
-//cout << "입력된 숫자가 6보다 작거나 같습니다." << endl;
+//	cout << "Hi" << endl;
+//	a++;
 //
 //}
-	 //switch문 실습
-	//당신의 고향은 어디입니까?
-	//1. 서울 2. 양평 3.광주 4. 대전 5.제주도
+//
+//while (1)
+//{
+//	cout << "LOL" << endl;
+//	b++;
+//		if (b >= 10)
+//		{
+//			break;
+//		}
+//}
+//
+//do
+//{
+//
+//	cout << "Good" << endl;
+//	c++;
+//
+//	if (c >= 10)
+//	{
+//		break;
+//
+//	}
+//}
+//while (1);
+//
+//
+////while 문을 이용하여 1~10정답을 맞출 때까지 반복되는 프로그램
+//int inf_Num = 0;
+//
+//while (1)
+//{
+//	
+//	cout << (inf_Num++) % 10 << "\n";
+//	if (randNum2 == inf_Num )
+//	{
+//		
+//		
+//		
+//		break;
+//
+//
+//
+//
+//	}
+//}
+//
+//
+//for (int i = 0; i < 5; i++)
+//{
+//
+//	cout << "Hello world" << endl;
+//
+//
+//
+//}
 
-	//안녕하세요 당신의 고향은 서울이군요.
-int chose_Num;
+//실습 1. For 문을 이용하여  10부터 1까지
 
-cout << "당신의 고향은 어디입니까? \n " << "1. 서울 2. 양평 3. 광주 4. 대전 5. 제주도\n";
-cin >> chose_Num;
+//실습 2. 100미만의 3의배수를 차례대로 출력되는 코드를 작성
 
-switch (chose_Num)
+//실습 3. 1000까지의 2의 승수를 구해라
+
+//실습 4. 구구단
+
+cout << "실습 1\n";
+
+for (int i = 10; i > 0; i--)
 {
-case 1: 
-	cout << "안녕하세요 당신의 고향은 서울이군요";
-	break;
-case 2: 
-	cout << "안녕하세요 당신의 고향은 양평이군요";
-	break;
-case 3:
-	cout << "안녕하세요 당신의 고향은 광주이군요";
-	break;
-case 4:
-	cout << "안녕하세요 당신의 고향은 대전이군요";
-	break;
-case 5: 
-	cout << "안녕하수꽝, 혼저옵서예";
-	break;
 
-default:
-	break;
+	cout << i << endl;
+
+
+
+}
+cout << "실습 2\n";
+for (int i = 3; i < 100; i= i+3)
+{
+
+	cout << i << endl;
+
+
+
+}
+
+cout << "실습 3\n";
+for (int i = 1; i < 1000; i = i*2 )
+{
+
+	cout << i << endl;
+
+
+
 }
 
 
+cout << "\n실습 4\n";
+for (int i = 1; i < 10; i = i++)
+{
+
+	cout << 2 << "x"<< i <<"=" << 2 * i << endl;
+
+
+
+}
+
+
+cout << "\n실습 5\n";
+for (int i = 2; i < 10; i = i+=3)
+{
+	for (int j = 1; j < 10; j = j++)
+	{
+	
+		for (int k = i; k < i + 3; k++)
+		{
+
+
+
+			cout << k << " x " << j << "  =  " << k * j << "  ";
 
 
 
 
+
+		}
+
+		cout << "\n";
+	
+	}
+		
+	cout << "\n";
+
+
+
+}
 
 
 }
