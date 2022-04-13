@@ -30,6 +30,15 @@
         -> 4개 학년에 각각 3개 반이 존재, 각 반에 5명의 학생이 있다.
 
 
+    (엔터 없이 ) 문자 하나를 입력받는 방법
+    _getch();
+
+    -데이터형변환 : 데이터타입을 변환한다.
+    묵시적 형변환 
+
+    명시적 형변환 : 문법을 써서 강제로 변환
+    cout << (int)input_key_char << endl;
+
 
 */
 
@@ -37,9 +46,16 @@
 
 #include <iostream>
 #include <string>
+#include <conio.h>
+
 using namespace std;
 int main()
 {
+    //int input_key = _getch();
+    //char input_key_char = _getch();
+    //cout << (int)input_key_char << endl;
+    //float test_float = 5.4f; // f가없으면 double로 인식
+
     /*int nums[10] = { 1,22,3,34,5,64,75,8,9,12 };
 
     cout << nums[8] << endl;
@@ -104,31 +120,88 @@ int main()
 
     }*/
 
-    //구구단의 결과를 저장하는 2차원 배열을 하나 선언하고,
-    //이중 for문을 이용홰서 배열 변수에 구구단의 결과값을 저장하고,
-    //두 수를 입력받아서 적합한 결과값을 출력해보자
+    ////구구단의 결과를 저장하는 2차원 배열을 하나 선언하고,
+    ////이중 for문을 이용홰서 배열 변수에 구구단의 결과값을 저장하고,
+    ////두 수를 입력받아서 적합한 결과값을 출력해보자
+    //int googoo_nums[8][9];
+    //int what_Num;
+    //int what_Num2;
+    //for (int i =0 ; i > 8; i++)
+    //{
+    //    
+    //    for (int j = 0; j > 9; j++)
+    //    {
+    //        googoo_nums[i][j] = (i + 2) * (j + 1);
+    //    }
+    //}
+    //cout << "(결과 저장 완료)\n";
+    //cout << "몇단? :";
+    //cin >> what_Num;
+    //cout << "몇을 곱할? :";
+    //cin >> what_Num2;
+    //cout << "정답은 " << googoo_nums[what_Num - 2][what_Num2 - 1] << "입니다." <<endl;
 
-    int googoo_nums[8][9];
-    int what_Num;
-    int what_Num2;
+    //실습
+    /*
+    A~Z 키중 하나를 정답으로 설정한다.
+    유저는 한 개의 키를 입력해서 설정된 값을 맞춘다.
+    유저가 입력한 키와 설정된 값이 맞으면 승리, 프로그램 종료
+    틀리면 남은 기회를 보여주고,
+    5번 틀리면 정답을 알려주고 게임오버
 
-    for (int i =0 ; i > 8; i++)
+    + 틀릴 때마다 정답 알파벳이 입력된 알파벳 앞에 있는지, 뒤에있는지 힌트를 준다.
+
+    + 입력된 값이 대소문자 구분없이 처리될 수 있도로 수정 해보자.
+
+
+    */
+srand(time(NULL));
+
+
+
+int Answer = (rand() % 25) + 97;
+
+cout << "미리보는 정답: " << (char)Answer << endl;
+
+for ( int death_Count = 5; death_Count > 0; death_Count--)
+{
+    
+    cout << "A~Z 키중 하나를 누르세요: ";
+    int What_key = _getch();
+    
+    if ( What_key < 97)
     {
-        
-
-        for (int j = 0; j > 9; j++)
-        {
-
-            googoo_nums[i][j] = (i + 2) * (j + 1);
-
-        }
+        What_key += 32;            
     }
-    cout << "결과 저장 완료\n";
-    cout << "몇단? :";
-    cin >> what_Num;
-    cout << "몇을 곱할? :";
-    cin >> what_Num2;
 
-    cout << "정답은 " << googoo_nums[what_Num][what_Num2] << "입니다.";
+
+    if (What_key == Answer)
+    {
+        cout << "정답입니다, 수고하셨습니다.";
+        exit(0);
+    }
+
+    else if (What_key > Answer)
+    {
+        cout << "틀렸습니다."<< endl;
+        cout << "남은 횟수:" << (death_Count-1) << endl;
+        cout << "입렵된 값보다 뒤 \n";
+    }
+    else if (What_key < Answer)
+    {
+        cout << "틀렸습니다." << endl;
+        cout << "남은 횟수: " << (death_Count - 1) << endl;
+        cout << "입렵된 값보다 앞 \n";
+    }
+
+
+}
+
+cout << "정답은 : " << (char)Answer << "입니다.\n\n ";
+
+cout << "게임 오버";
+
+
+    
 
 }
