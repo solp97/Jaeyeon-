@@ -64,7 +64,17 @@ int main()
          *
 
 
+    8)
 
+     *********
+      *******
+       *****
+        ***
+         *
+        ***
+       *****
+      *******
+     *********
 
     */
 
@@ -173,7 +183,51 @@ int main()
         }
         cout << "\n";
     }
+    cout << "8번 문제" << endl;
+
+    for (int i = 1; i < 6; i++)
+    {
+        for (int a = i; a > 0; a--)
+        {
+            cout << " ";
+        }
+        for (int c = 10; c > i * 2 - 1; c--)
+        {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+
+    for (int i = 4; i > 0; i--)
+    {
+        for (int a = i ; a > 0; a--)
+        {
+            cout << " ";
+        }
+        int b = 6 - i;
+        for (int c = 0; c < b * 2 - 1; c++)
+        {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+
+    cout << "9번 문제" << endl;
+    for (int i = 5; i > 0; i--)
+    {
+        for (int j = 0; j < (i*2)-1; j++)
+        {
+            cout << "*" << endl;;
+        }
+        cout << " \n";
+    }
+
+    
+
 }
+
+
+
 
 
 
