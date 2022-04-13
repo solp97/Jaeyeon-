@@ -155,53 +155,94 @@ int main()
 
 
     */
+//srand(time(NULL));
+//int Answer = (rand() % 25) + 97;
+//
+//cout << "미리보는 정답: " << (char)Answer << endl;
+//
+//for ( int death_Count = 5; death_Count > 0; death_Count--)
+//{
+//    
+//    cout << "A~Z 키중 하나를 누르세요: ";
+//    int What_key = _getch();
+//    
+//    if ( What_key < 97)
+//    {
+//        What_key += 32;            
+//    }
+//
+//
+//    if (What_key == Answer)
+//    {
+//        cout << "정답입니다, 수고하셨습니다.";
+//        exit(0);
+//    }
+//
+//    else if (What_key > Answer)
+//    {
+//        cout << "틀렸습니다."<< endl;
+//        cout << "남은 횟수:" << (death_Count-1) << endl;
+//        cout << "입렵된 값보다 뒤 \n";
+//    }
+//    else if (What_key < Answer)
+//    {
+//        cout << "틀렸습니다." << endl;
+//        cout << "남은 횟수: " << (death_Count - 1) << endl;
+//        cout << "입렵된 값보다 앞 \n";
+//    }
+//
+//
+//}
+//
+//cout << "정답은 : " << (char)Answer << "입니다.\n\n ";
+//
+//cout << "게임 오버";
+
+//-------- - 콘솔용 탈출게임--------------------------------------
+//10 * 10 크기의 맵을 구성한다. (2차원 배열)
+//플레이어(0, 0) 가 존재한다.
+//탈출지점이 존재한다.
+//WASD 키입력을 통해 플레이어를 이동시킨다.
+//탈출지점은(0, 0)을 제외하고 랜덤 설정
+//O가 E에 도달하면 "탈출에 성공했습니다."프로그램 종료
+//
+//
+//
+//##########
+//##########
+//##########
+//##########
+//##########
+//##########
+//##########
+//##########
+//##########
+//##########
+//
+//system("cls"); //한번 청소
 srand(time(NULL));
+;
 
+string map_sharp[10][10];// 맵 크기 [10,10]
+map_sharp[0][0] = "◎"; //플레이어 [0,0] 위치
+map_sharp[rand() % 11][rand() % 11] = "E"; // 목적지 랜덤위치
 
+    for (int i=0; i > 10; i++)  // 맵 생성
+    {
+        for (int j = 0; j > 10; j++)
+        {
+            if (i == 0 && j == 0)
+            {
+                j ++;
+            }
+             map_sharp[i][j] = "●";
 
-int Answer = (rand() % 25) + 97;
-
-cout << "미리보는 정답: " << (char)Answer << endl;
-
-for ( int death_Count = 5; death_Count > 0; death_Count--)
-{
+             cout << map_sharp[0][0];
+        }
+        cout << "\n";
+    }
     
-    cout << "A~Z 키중 하나를 누르세요: ";
-    int What_key = _getch();
-    
-    if ( What_key < 97)
-    {
-        What_key += 32;            
-    }
 
 
-    if (What_key == Answer)
-    {
-        cout << "정답입니다, 수고하셨습니다.";
-        exit(0);
-    }
-
-    else if (What_key > Answer)
-    {
-        cout << "틀렸습니다."<< endl;
-        cout << "남은 횟수:" << (death_Count-1) << endl;
-        cout << "입렵된 값보다 뒤 \n";
-    }
-    else if (What_key < Answer)
-    {
-        cout << "틀렸습니다." << endl;
-        cout << "남은 횟수: " << (death_Count - 1) << endl;
-        cout << "입렵된 값보다 앞 \n";
-    }
-
-
-}
-
-cout << "정답은 : " << (char)Answer << "입니다.\n\n ";
-
-cout << "게임 오버";
-
-
-    
 
 }
