@@ -221,73 +221,38 @@ cout << num << "번째 학생의 이름은: " << names[num - 1] << "입니다" <
  //
  // _getch()
  //system("cls"); //한번 초기화
-    srand(time(NULL));
+
+    srand(time(NULL)); // 목적지 랜덤위치
     string map_sharp[10][10];// 맵 크기 [10,10]
-     // 목적지 랜덤위치
-    
-    
-
-    for (int y = 0; y > 10; y++)  // 맵 생성
+    string player[1][1];
+    string arive[10][10];
+    int x;
+    int y;
+    do
     {
-        for (int x = 0; x > 10; x++)
+         
+        arive[rand() % 10 ][rand() % 10] = "★";// 목적지 랜덤위치
+        for (int y = 0; y < 10; y++)  // 맵 생성
+
         {
-            (string)map_sharp[y][x] = "#";
 
-            cout << (string)map_sharp[y][x];
+            for (int x = 0; x < 10; x++)
+            {
+                map_sharp[y][x] = '#';
+            }
+
         }
-        cout << "\n";
-
-        
-    }
-
-    map_sharp[rand() % 11][rand() % 11] = "E"; // 탈출 위치 랜덤
-
-
-    int input_key = _getch();
-
-
-    for (int y = 0; y > 10; y++)  // 플레이어 위치변경
-    {
-        for (int x = 0; x > 10; x++) 
+        for (int y = 0; y < 10; y++)  // 맵 생성
         {
-            map_sharp[y][x] = "O";
-            cout << (string)map_sharp[y][x];
-            cin >> input_key;
-
-            if (input_key == 65|| input_key == 97) // A 키
+            for (int x = 0; x < 10; x++)
             {
-                x--;
-                if (x < 0)
-                {
-                    x = 0;
-                }
+                cout << map_sharp[y][x];
             }
-            if (input_key == 68 || input_key == 100) // D 키
-            {
-                x++;
-                if (x > 9)
-                {
-                    x = 9;
-                }
-            }
+            cout << "\n";
         }
-        cout << "\n";
-        if (input_key == 87 || input_key == 119) // W 키
-        {
-            y--;
-            if (y < 0)
-            {
-                y = 0;
-            }
-        }
-        if (input_key == 83 || input_key == 115) // S 키
-        {
-            y++;
-
-            if (y > 9)
-            {
-                y = 9;
-            }
-        }
-    } 
+        system("cls");
+       
+       
+    } while (player[1][1] == arive[(rand() % 10)][(rand() % 10)]);
 }
+
