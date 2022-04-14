@@ -223,29 +223,32 @@ cout << num << "번째 학생의 이름은: " << names[num - 1] << "입니다" <
  //system("cls"); //한번 초기화
     
     srand(time(NULL)); // 목적지 랜덤위치
-    string map_sharp[10][10];// 맵 크기 [10,10]
-    int exit_x = 5;
-    int exit_y = 7;
+    string map_sharp[15][15];// 맵 크기 [10,10]
+    int exit_x = (rand() % 9)+1;
+    int exit_y = (rand() % 9)+1;
     int player_x = 0;
     int player_y = 0;
    
     do
     {
-        for (int y = 0; y < 10; y++)  // # 넣기
+        system("cls");
+
+
+        for (int y = 0; y < 15; y++)  // # 넣기
         {
 
-            for (int x = 0; x < 10; x++)
+            for (int x = 0; x < 15; x++)
             {
-                map_sharp[y][x] = '#';
+                map_sharp[y][x] = ' ';
             }
         }
 
-        map_sharp[player_y][player_x] = "★";
-        map_sharp[exit_y][exit_x] = "E";
+        map_sharp[player_y][player_x] = "*";
+        map_sharp[exit_y][exit_x] = "O";
 
-        for (int y = 0; y < 10; y++)  // 맵 생성
+        for (int y = 0; y < 15; y++)  // 맵 생성
         {
-            for (int x = 0; x < 10; x++)
+            for (int x = 0; x < 15; x++)
             {
                 cout << map_sharp[y][x];
             }
@@ -271,10 +274,12 @@ cout << num << "번째 학생의 이름은: " << names[num - 1] << "입니다" <
             player_y--;
         }
         
-        system("cls");
+        
 
-
+        
 
     } while (map_sharp[player_y][player_x] == map_sharp[exit_x][exit_y]);
+    
+    cout << "게임 오버";
 
 }
