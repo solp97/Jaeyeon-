@@ -221,27 +221,28 @@ cout << num << "번째 학생의 이름은: " << names[num - 1] << "입니다" <
  //
  // _getch()
  //system("cls"); //한번 초기화
-
+    
     srand(time(NULL)); // 목적지 랜덤위치
     string map_sharp[10][10];// 맵 크기 [10,10]
-    string player[1][1];
-    string arive[10][10];
-    int x;
-    int y;
+    int exit_x = 5;
+    int exit_y = 7;
+    int player_x = 0;
+    int player_y = 0;
+   
     do
     {
-         
-        arive[rand() % 10 ][rand() % 10] = "★";// 목적지 랜덤위치
-        for (int y = 0; y < 10; y++)  // 맵 생성
-
+        for (int y = 0; y < 10; y++)  // # 넣기
         {
 
             for (int x = 0; x < 10; x++)
             {
                 map_sharp[y][x] = '#';
             }
-
         }
+
+        map_sharp[player_y][player_x] = "★";
+        map_sharp[exit_y][exit_x] = "E";
+
         for (int y = 0; y < 10; y++)  // 맵 생성
         {
             for (int x = 0; x < 10; x++)
@@ -250,9 +251,30 @@ cout << num << "번째 학생의 이름은: " << names[num - 1] << "입니다" <
             }
             cout << "\n";
         }
-        system("cls");
-       
-       
-    } while (player[1][1] == arive[(rand() % 10)][(rand() % 10)]);
-}
 
+        char get_key = _getch();
+        if (get_key == 65 || get_key == 97) // A
+        {
+            player_x--;
+        }
+        if (get_key == 68 || get_key == 100) // D
+        {
+            player_x++;
+        }
+        if (get_key == 83 || get_key == 115)// S
+        {
+            player_y++;
+        }
+
+        if (get_key == 87 || get_key == 119)// W
+        {
+            player_y--;
+        }
+        
+        system("cls");
+
+
+
+    } while (map_sharp[player_y][player_x] == map_sharp[exit_x][exit_y]);
+
+}
