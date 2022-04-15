@@ -21,7 +21,7 @@ struct student
     2.구조적
     3.객체지향적
 ###추상화###
-c언어에서 코드를 ㅅ추상화하는 데 사용되는 삼총사 : 배여르 구조체, 함수
+c언어에서 코드를 추상화하는 데 사용되는 삼총사 : 배여르 구조체, 함수
 추상화??? 실제 세계 (현상) 를 간략화 / 기호화/ 보편화 해서 표현한 것
 코드에서 추상화가 필요한 이유 : 결국 코드는 사람이 짜는 것이기 때문에 다른사람이 코드를 해석하기 편리해야하고
 다른사람이 인수인계 받아서 유지보수하기 편리해야  하고, 다른 사람들과 함께 공동으로 코드를 만들기 편리해야 하고
@@ -74,7 +74,6 @@ string 같은 클래스도 사용 가능, array 배열도 사용 가능
 
     
 */
-
 /*
 사용할 수 있는 모든 요소에 구조체를 활용해서 소스 코드를 개선
  tile : 지형 정보를 넣고 (숲, 늪, 평지)
@@ -88,15 +87,15 @@ string 같은 클래스도 사용 가능, array 배열도 사용 가능
 
 int main()
 {
-    student jaeYeon;
-    jaeYeon.age = 26;
-    jaeYeon.pride = 22;
-    jaeYeon.homeTown = "김제";
-    jaeYeon.name = "최재연";
+    student JY;
+    JY.age = 26;
+    JY.pride = 22;
+    JY.homeTown = "김제";
+    JY.name = "Solp";
     
 
-    cout << jaeYeon.name << endl;
-    cout << jaeYeon.homeTown << endl;
-    cout << jaeYeon.pride << endl;
-    cout << jaeYeon.age << endl;
+    cout << JY.name << endl;
+    cout << JY.homeTown << endl;
+    cout << JY.pride << endl;
+    cout << JY.age << endl;
 }
